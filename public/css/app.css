@@ -8349,4 +8349,81 @@ button.close {
     display: none !important;
   }
 }
+<<<<<<< HEAD
+=======
+
+body {
+  padding-top: 60px;
+}
+
+.navbar-reverse {
+  background-color: #3c3e42;
+}
+
+textarea {
+  border: 1px solid black;
+}
+
+.jumbotron {
+  text-align: center;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #777;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+#logo {
+  float: left;
+  margin-left: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #fff;
+}
+
+input,
+textarea,
+select,
+.uneditable-input {
+  border: 1px solid #bbb;
+  margin-bottom: 15px;
+}
+
+input {
+  height: auto !important;
+}
+
+.panel {
+  margin-top: 50px;
+}
+>>>>>>> 941db9be7a84ba71f9861c67def395325a362634
 
