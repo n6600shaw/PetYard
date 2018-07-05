@@ -1,7 +1,5 @@
 <?php
-
-require _DIR_.'/helpers.php';
-
+require __DIR__.'/helpers.php';
 /*
 |--------------------------------------------------------------------------
 | Create The Application
