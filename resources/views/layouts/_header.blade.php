@@ -8,7 +8,7 @@
                         <a href="{{route('help')}}">Help</a>
                         </li>
                         <li>
-                        <a href="#">Login</a>
+                        <a href="{{route('login')}}">Login</a>
                         </li>
                     </ul>
                 </nav>
