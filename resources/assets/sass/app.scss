@@ -1,5 +1,5 @@
 // Bootstrap
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
 $navbar-color:#3c3e42;
 
@@ -8,17 +8,21 @@ body{
 
 }
 
-.navbar-reverse{
-    background-color: $navbar-color;
-}
+section {
+    overflow: auto;
+  }
+  
 
 textarea{
+    resize: vertical;
     border:1px solid black;
 }
 
 .jumbotron{
     text-align: center;
 }
+
+/* typography */
 
 h1 {
     font-size: 3em;
@@ -37,17 +41,15 @@ h1 {
   }
 
 
-h1{
-    font-size: 3em;
-    letter-spacing: -2px;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-
 p{
     font-size: 1.1em;
     
+}
+
+/* header */
+.navbar-reverse{
+    background-color: $navbar-color;
+
 }
 
 #logo {
@@ -65,6 +67,14 @@ p{
     }
 }
 
+#logout {
+    cursor: default;
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+/*forms*/
 input, textarea, select, .uneditable-input {
     border: 1px solid #bbb;
     margin-bottom: 15px;
@@ -77,4 +87,9 @@ input, textarea, select, .uneditable-input {
   .panel {
     margin-top: 50px;
   }
+
+/*user page*/
+.gravatar{
+ border-radius:100%;
+}
   

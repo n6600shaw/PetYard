@@ -8354,17 +8354,20 @@ body {
   padding-top: 60px;
 }
 
-.navbar-reverse {
-  background-color: #3c3e42;
+section {
+  overflow: auto;
 }
 
 textarea {
+  resize: vertical;
   border: 1px solid black;
 }
 
 .jumbotron {
   text-align: center;
 }
+
+/* typography */
 
 h1 {
   font-size: 3em;
@@ -8382,15 +8385,14 @@ h2 {
   color: #777;
 }
 
-h1 {
-  font-size: 3em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
 p {
   font-size: 1.1em;
+}
+
+/* header */
+
+.navbar-reverse {
+  background-color: #3c3e42;
 }
 
 #logo {
@@ -8408,6 +8410,16 @@ p {
   color: #fff;
 }
 
+#logout {
+  cursor: default;
+}
+
+#logout:hover {
+  background-color: transparent;
+}
+
+/*forms*/
+
 input,
 textarea,
 select,
@@ -8422,5 +8434,11 @@ input {
 
 .panel {
   margin-top: 50px;
+}
+
+/*user page*/
+
+.gravatar {
+  border-radius: 100%;
 }
 
