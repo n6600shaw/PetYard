@@ -2,48 +2,47 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Auth;
+use Illuminate\Http\Request;
+
 class SessionsController extends Controller
 {
     //
-    public function create(){
+    public function create()
+    {
 
         return view('sessions.create');
     }
 
-    public function store(Request $request){
+    public function store(Request $request)
+    {
 
         $credentials = $this->validate($request, [
             'email' => 'required|email|max:255',
-            'password' => 'required'
+            'password' => 'required',
         ]);
- 
-        if(Auth::attempt($credentials,$request->has('remember'))){
-                        session()->flash('success','Welcome back!');
-                        return redirect()->route('users.show',[Auth::user()]);
 
+        if (Auth::attempt($credentials, $request->has('remember'))) {
+            session()->flash('success', 'Welcome back!');
+            return redirect()->route('users.show', [Auth::user()]);
 
+        } else {
 
-
-        } else{
-
-               session()->flash('danger','Sorry, E-mail or password does not match');
-               return redirect()->back();
+            session()->flash('danger', 'Sorry, E-mail or password does not match');
+            return redirect()->back();
 
         }
-    
+
         return;
     }
 
-    public function destroy(){
+    public function destroy()
+    {
 
-      Auth::logout();
-      session()->flash('success','Logout successfully!');
-      return redirect('login');
-
+        Auth::logout();
+        session()->flash('success', 'Logout successfully!');
+        return redirect('login');
 
     }
-
 
 }
