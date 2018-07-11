@@ -11,7 +11,8 @@
 
     <div class="container">
         @include('shared._message')
-        @yield('content') @include('layouts._footer')
+        @yield('content') 
+        @include('layouts._footer')
  
 
 <script src="/js/app.js"></script>

@@ -11,8 +11,8 @@
                 {{ Auth::user()->name }} <b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
-                <li><a href="{{ route('users.show', Auth::user()->id) }}">Personal page</a></li>
-                <li><a href="#">Edit profile</a></li>
+                <li><a href="{{route('users.show', Auth::user()->id) }}">Personal page</a></li>
+                <li><a href="{{route('users.edit',Auth::user()->id)}}">Edit profile</a></li>
                 <li class="divider"></li>
                 <li>
                   <a id="logout" href="#">

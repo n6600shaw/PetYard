@@ -8442,3 +8442,13 @@ input {
   border-radius: 100%;
 }
 
+.gravatar_edit {
+  margin: 15px auto;
+  text-align: center;
+}
+
+.gravatar_edit .gravatar {
+  float: none;
+  max-width: 100px;
+}
+
