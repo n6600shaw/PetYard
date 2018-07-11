@@ -1,4 +1,6 @@
-@extends('layouts.default') @section('title','Login') @section('content')
+@extends('layouts.default')
+ @section('title','Login') 
+ @section('content')
 <div class='col-md-offset-2 col-md-8'>
     <div class='panel panel-default'>
         <div class='panel-heading'>
@@ -6,7 +8,7 @@
         </div>
         <div class='panel-body'>
             @include('shared._errors')
-            <form method='post' action='{{route(' login ')}}'>
+            <form method='post' action='{{route('login')}}'>
                 {{csrf_field()}}
                 <div class='form-group'>
                     <label for='email'>E-mail:</label>
@@ -21,11 +23,11 @@
                         <input type="checkbox" name="remember"> Remember me</label>
                 </div>
                 <button type='submit' class='btn btn-primary'>Login</button>
-                <form>
+            </form>
                     <hr>
 
                     <p>Not registered?
-                        <a href='{{route(' signup ')}}'>Register now!</a>
+                        <a href='{{route('signup')}}'>Register now!</a>
                     </p>
         </div>
     </div>

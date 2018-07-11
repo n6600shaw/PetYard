@@ -19,10 +19,10 @@ class SessionsController extends Controller
 
         $credentials = $this->validate($request, [
             'email' => 'required|email|max:255',
-            'password' => 'required',
+            'password' => 'required'
         ]);
 
-        if (Auth::attempt($credentials, $request->has('remember'))) {
+        if (Auth::attempt($credentials)) {
             session()->flash('success', 'Welcome back!');
             return redirect()->route('users.show', [Auth::user()]);
 

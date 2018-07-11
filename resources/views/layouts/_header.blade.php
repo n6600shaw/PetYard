@@ -7,6 +7,7 @@
             <nav>
                 <ul class="nav navbar-nav navbar-right">
                     @if (Auth::check())
+<<<<<<< HEAD
                     <li>
                         <a href="#">User list</a>
                     </li>
@@ -44,6 +45,34 @@
                     @endif
                 </ul>
             </nav>
+=======
+            <li><a href="#">User list</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                {{ Auth::user()->name }} <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="{{route('users.show', Auth::user()->id) }}">Personal page</a></li>
+                <li><a href="{{route('users.edit',Auth::user()->id)}}">Edit profile</a></li>
+                <li class="divider"></li>
+                <li>
+                  <a id="logout" href="#">
+                    <form action="{{ route('logout') }}" method="POST">
+                      {{ csrf_field() }}
+                      {{ method_field('DELETE') }}
+                      <button class="btn btn-block btn-danger" type="submit" name="button">Logout</button>
+                    </form>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          @else
+            <li><a href="{{ route('help') }}">Help</a></li>
+            <li><a href="{{ route('login') }}">Login</a></li>
+          @endif
+                    </ul>
+                </nav>
+>>>>>>> 170a1cbf99290dede9caaf2aa7d8fb07f1b75935
 
         </div>
     </div>
