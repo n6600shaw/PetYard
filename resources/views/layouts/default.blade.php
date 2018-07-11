@@ -14,10 +14,7 @@
         @include('shared._message')
         @yield('content') 
         @include('layouts._footer')
-<<<<<<< HEAD
     </div>
-=======
->>>>>>> 170a1cbf99290dede9caaf2aa7d8fb07f1b75935
  
 
 <script src="/js/app.js"></script>
