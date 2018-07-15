@@ -20,7 +20,7 @@
                                 <a href="{{ route('users.show', Auth::user()->id) }}">Personal page</a>
                             </li>
                             <li>
-                                <a href="#">Edit profile</a>
+                                <a href="{{route('users.index')}}">Edit profile</a>
                             </li>
                             <li class="divider"></li>
                             <li>
