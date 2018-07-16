@@ -10,13 +10,13 @@ class UsersController extends Controller
     //middelware
     public function __construct(){
           $this->middleware('auth',[
-          'except'=>['create','store','index']
+          'except'=>['create','store']
 
     ]);
 
     $this->middleware('guest',[
             
-        'only'=>['create','index']
+        'only'=>['create']
 
     ]);
     
@@ -93,5 +93,16 @@ class UsersController extends Controller
         $user->update($data);
         session()->flash('success','Profile successfully updated!');
         return redirect()->view('users.show',$user->id);
+    }
+
+    public function destroy(User $user){
+
+        $this->authorize('destroy',$user);
+        $user->delete();
+        session()->flash('success',"Successfully deleted user:".$user->id);
+        return back();
+        
+
+
     }
 }

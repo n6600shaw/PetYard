@@ -8,7 +8,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     @if (Auth::check())
                     <li>
-                        <a href="#">User list</a>
+                        <a href="{{route('users.index')}}">User list</a>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -20,7 +20,7 @@
                                 <a href="{{ route('users.show', Auth::user()->id) }}">Personal page</a>
                             </li>
                             <li>
-                                <a href="{{route('users.index')}}">Edit profile</a>
+                                <a href="{{route('users.edit',Auth::user()->id)}}">Edit profile</a>
                             </li>
                             <li class="divider"></li>
                             <li>
