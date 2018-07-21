@@ -27,7 +27,10 @@ return view('test.test1',compact('user1','user2','vaiable'));
 
 
 });
+//user route
 Route::resource('users','UsersController');
 Route::get('login','SessionsController@create')->name('login');
 Route::post('login','SessionsController@store')->name('login');
 Route::delete('logout','SessionsController@destroy')->name('logout');
+
+Route::resource('statuses','StatusesController',['only'=>['store','destroy']]);

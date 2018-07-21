@@ -10,7 +10,7 @@ class UsersController extends Controller
     //middelware
     public function __construct(){
           $this->middleware('auth',[
-          'except'=>['create','store']
+          'except'=>['create','store','show']
 
     ]);
 
@@ -37,8 +37,8 @@ class UsersController extends Controller
     }
     public function show(User $user)
     {
-
-        return view('users.show', compact('user'));
+        $statuses=$user->statuses()->orderby('created_at','dec')->paginate(30);
+        return view('users.show', compact('user','statuses'));
     }
 
     public function store(Request $request)

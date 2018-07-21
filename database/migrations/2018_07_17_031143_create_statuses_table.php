@@ -17,7 +17,7 @@ class CreateStatusesTable extends Migration
             $table->increments('id');
             $table->text('content');
             $table->integer('user_id')->index();
-            $table->inext(['created_at']);
+            $table->index(['created_at']);
             $table->timestamps();
         });
     }
