@@ -29,6 +29,10 @@ return view('test.test1',compact('user1','user2','vaiable'));
 });
 //user route
 Route::resource('users','UsersController');
+Route::get('/users/{user}/followings','UsersController@followings')->name('users.followings');
+Route::get('/users/{user}/followers','UsersController@followers')->name('users.followers');
+
+
 Route::get('login','SessionsController@create')->name('login');
 Route::post('login','SessionsController@store')->name('login');
 Route::delete('logout','SessionsController@destroy')->name('logout');
