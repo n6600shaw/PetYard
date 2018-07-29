@@ -1,6 +1,7 @@
 @extends('layouts.default') 
 @section('title','Home') 
 @section('content') 
+
 @if (Auth::check())
 
 <div class="row">
@@ -10,11 +11,17 @@
     </section>
     <h3>Posts list</h3>   
     @include('shared._feed')
+  </div>
   <aside class="col-md-4">
     <section class="user_infor">
   @include('shared._user_info',['user'=>Auth::user()])
     </section>
+    <section class="stats">
+      
+      @include('shared._stats', ['user'=>Auth::user()])
+      <section>
   </aside>
+
 </div>
 @else
 <div class="jumbotron">
